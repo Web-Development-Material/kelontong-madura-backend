@@ -16,7 +16,12 @@ export const getProductById = (req: Request, res: Response) => {
   res.send(product);
 };
 
-export const createProduct = () => {};
+export const createProduct = (req: Request, res: Response) => {
+  const prod = req.body;
+  const newProduct = { ...prod, id: madura.productsData.length + 1 };
+  madura.productsData.push(newProduct);
+  return res.status(201).send(newProduct);
+};
 
 export const updateProduct = (req: Request, res: Response) => {
   const { id } = req.params;
