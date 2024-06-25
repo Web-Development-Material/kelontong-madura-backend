@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import madura from "../../dummy/madura.json" assert { type: "json" };
 
-export const getProducts = (res: Response) => {
+export const getProducts = (req: Request, res: Response) => {
   return res.send(madura);
 };
 
