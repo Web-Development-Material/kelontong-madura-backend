@@ -16,13 +16,21 @@ export const getProductById = (req: Request, res: Response) => {
   res.send(product);
 };
 
-
-export const updateProductId = (req: Request, res: Response) => {
+export const updateProduct = (req: Request, res: Response) => {
   const { id } = req.params;
   const updateStock = req.body;
-  const index = madura.productsData.findIndex((madura)=>madura.id ===parseInt(id);
-  
-)
+  const index = madura.productsData.findIndex(
+    (madura) => madura.id === parseInt(id)
+  );
+  if (index !== -1) {
+    madura.productsData[index] = {
+      ...madura.productsData[index],
+      ...updateStock,
+    };
+    return res.status(200).send(madura.productsData[index]);
+  }
+  return res.status(404).send("Product not found");
+};
 
 export const deleteProduct = (req: Request, res: Response) => {
   const { id } = req.params;

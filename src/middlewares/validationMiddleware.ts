@@ -14,7 +14,8 @@ export const validateProduct = (
     harga === undefined ||
     harga === null ||
     stock === undefined ||
-    stock === null
+    stock === null ||
+    stock < 0
   ) {
     res.status(400).send("isi nya tak boleh kosong");
   }
