@@ -11,9 +11,9 @@ import {
 
 const router: Router = Router();
 
-router.get("/products", getProducts);
-router.get("/products/:id", getProductById);
-router.put("/products/:id", validateProduct, updateProduct);
-router.post("/products", validateProduct, createProduct);
-router.delete("/products/:id", deleteProduct);
+router.get("products", getProducts);
+router.get("products/:id", getProductById);
+router.put("products/:id", validateProduct, updateProduct);
+router.post("products", validateProduct, createProduct);
+router.delete("products/:id", deleteProduct);
 export { router as productRouter };
