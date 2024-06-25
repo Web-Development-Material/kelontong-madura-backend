@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import madura from "../../dummy/madura.json" assert { type: "json" };
 
-export const getProducts = (req: Request, res: Response) => {
+export const getProducts = (res: Response) => {
   return res.send(madura);
 };
 
@@ -16,10 +16,7 @@ export const getProductById = (req: Request, res: Response) => {
   res.send(product);
 };
 
-export const createProduct = (req: Request, res: Response) => {};
-const prod = req.body;
-const newProduct = { ...prod, id: productRo.data.length + 1 };
-productRouter.data.push;
+export const createProduct = () => {};
 
 export const updateProduct = (req: Request, res: Response) => {
   const { id } = req.params;
