@@ -17,6 +17,7 @@ export const getProductById = (req: Request, res: Response) => {
 };
 
 export const createProduct = (req: Request, res: Response) => {};
+
 export const updateProduct = (req: Request, res: Response) => {
   const { id } = req.params;
   const updateStock = req.body;

@@ -11,6 +11,7 @@
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
+    "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
       "*": ["node_modules/*"]

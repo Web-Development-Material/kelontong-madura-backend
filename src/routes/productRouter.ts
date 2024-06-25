@@ -1,13 +1,13 @@
 import { Router } from "express";
 // Import controller functions and middleware
-import { validateProduct } from "../middlewares/validationMiddleware";
+import { validateProduct } from "../middlewares/validationMiddleware.ts";
 import {
   getProducts,
   getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
-} from "../controllers/productController";
+} from "../controllers/productController.ts";
 
 const router: Router = Router();
 
